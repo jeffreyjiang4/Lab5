@@ -25,17 +25,18 @@
         <input type="file" name="image" id="image-input" accept="image/*"><br>
         <input type="text" name="textTop" id="text-top" placeholder="Top Text"><br>
         <input type="text" name="textBottom" id="text-bottom" placeholder="Bottom Text"><br>
-        <button type="submit">Generate</button>
+        <button type="submit" id="generate">Generate</button>
         <div id="button-group">
-          <button type="reset" disabled>Clear</button>
-          <button type="button" disabled>Read Text</button>
+          <button type="reset" id="clear" disabled>Clear</button>
+          <button type="button" id="read" disabled>Read Text</button>
         </div>
-        <select name="voices" id="voice-selection" disabled>
-          <option value="none" selected>No available voice options.</option>
+        <select name="voices" id="voice-selection">
+          <option value="none" >No available voice options.</option>
+          <option value="English" >English</option> 
         </select>
         <div id="volume-group">
-          <img src="icons/volume-level-3.svg" alt="Volume Level 3">
-          <input type="range" min=0 max=100 value=100>
+          <img src="icons/volume-level-3.svg" alt="Volume Level 3" id="volume-icon">
+          <input type="range" min=0 max=100 value=100 id="volume">
         </div>
       </form>
     </main>
