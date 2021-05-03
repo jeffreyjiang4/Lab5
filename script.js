@@ -110,6 +110,18 @@ volumeInput.addEventListener('change', () => {
   vol_icon.src = "./icons/" + icon + level + ".svg";
 });
 
+//if top text input changes after generated
+let topText = document.getElementById("text-top");
+topText.addEventListener('change', () => {
+  console.log(topText.value);
+  document.getElementById('generate').disabled = false; 
+});
+
+//if bottom text input changes after generated
+let bottomText = document.getElementById("text-bottom");
+bottomText.addEventListener('change', () => {
+  document.getElementById('generate').disabled = false;
+});
 
 /**
  * Takes in the dimensions of the canvas and the new image, then calculates the new
